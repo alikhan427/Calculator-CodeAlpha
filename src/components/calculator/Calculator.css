@@ -1,0 +1,43 @@
+/* Calculator container */
+.calculator {
+  background: #1a1a2e;
+  border-radius: 20px;
+  padding: 25px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.8);
+  width: 100%;
+  max-width: 400px;
+  min-width: 280px;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* Buttons grid layout using CSS Grid */
+.buttons-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  margin-top: 20px;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 480px) {
+  .calculator {
+    padding: 15px;
+    max-width: 100%;
+    border-radius: 15px;
+  }
+  
+  .buttons-grid {
+    gap: 8px;
+  }
+}
+
+@media (max-width: 360px) {
+  .calculator {
+    padding: 10px;
+  }
+  
+  .buttons-grid {
+    gap: 6px;
+  }
+}

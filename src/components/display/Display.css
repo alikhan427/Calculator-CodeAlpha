@@ -1,0 +1,101 @@
+/* Display container */
+.display {
+  background: #0f0f1a;
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 5px;
+  min-height: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+  border: 1px solid rgba(255, 255, 255, 0.03);
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+/* Input expression styling */
+.display-input {
+  color: #8888aa;
+  font-size: 1.2rem;
+  font-weight: 300;
+  min-height: 30px;
+  word-wrap: break-word;
+  word-break: break-all;
+  text-align: right;
+  width: 100%;
+  direction: rtl;
+  letter-spacing: 1px;
+  overflow-x: auto;
+  white-space: nowrap;
+  scrollbar-width: none;
+}
+
+.display-input::-webkit-scrollbar {
+  display: none;
+}
+
+/* Result display styling */
+.display-result {
+  color: #ffffff;
+  font-size: 3rem;
+  font-weight: 700;
+  min-height: 60px;
+  word-wrap: break-word;
+  word-break: break-all;
+  text-align: right;
+  width: 100%;
+  transition: all 0.3s ease;
+  line-height: 1.2;
+}
+
+/* Error state styling */
+.display-result.error {
+  color: #ff4757;
+  font-size: 2.5rem;
+  animation: shake 0.5s ease-in-out;
+}
+
+/* Shake animation for error */
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  20% { transform: translateX(-10px); }
+  40% { transform: translateX(10px); }
+  60% { transform: translateX(-10px); }
+  80% { transform: translateX(10px); }
+}
+
+/* Responsive adjustments */
+@media (max-width: 480px) {
+  .display {
+    padding: 15px;
+    min-height: 80px;
+  }
+  
+  .display-result {
+    font-size: 2.5rem;
+    min-height: 50px;
+  }
+  
+  .display-input {
+    font-size: 1rem;
+    min-height: 25px;
+  }
+}
+
+@media (max-width: 360px) {
+  .display {
+    padding: 12px;
+    min-height: 70px;
+  }
+  
+  .display-result {
+    font-size: 2rem;
+    min-height: 40px;
+  }
+  
+  .display-input {
+    font-size: 0.9rem;
+    min-height: 20px;
+  }
+}
